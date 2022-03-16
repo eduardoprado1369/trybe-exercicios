@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+        section {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
+
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .main-content .description {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //1
+
+        let body = document.getElementsByTagName('body')[0]
+        let titulo = document.createElement('h1')
+        titulo.innerHTML = "Exercício 5.2 - JavaScript DOM"
+        body.appendChild(titulo)
+        console.log(body)
+
+        //2
+
+        
+        let main = document.createElement('main')
+        main.className = 'maint-content'
+        body.appendChild(main)
+
+        //3
+
+        let section = document.createElement('section')
+        section.className = 'center-content'
+        main.appendChild(section)
+
+        //4
+
+        let paragrafo = document.createElement('p')
+        section.appendChild(paragrafo)
+        paragrafo.innerHTML = 'Teste'
+
+        //5
+
+        let sectionLeft = document.createElement('section')
+        sectionLeft.className = 'left-content'
+        main.appendChild(sectionLeft)
+
+        //6
+        let sectionRight = document.createElement('section')
+        sectionRight.className = 'right-content'
+        main.appendChild(sectionRight)
+
+        //7
+        let image = document.createElement('img')
+        image.src = 'https://picsum.photos/200'
+        image.className = 'small-image'
+        sectionLeft.appendChild(image)
+
+        //8
+
+        let unorderedList = document.createElement('ul')
+        sectionRight.appendChild(unorderedList)
+        let listItem1 = document.createElement('li')
+        unorderedList.appendChild(listItem1)
+        listItem1.innerHTML = 'Um'
+
+       
+        let listItem2 = document.createElement('li')
+        unorderedList.appendChild(listItem2)
+        listItem2.innerHTML = 'Dois'
+
+        let listItem3 = document.createElement('li')
+        unorderedList.appendChild(listItem3)
+        listItem3.innerHTML = 'Três'
+
+        let listItem4 = document.createElement('li')
+        unorderedList.appendChild(listItem4)
+        listItem4.innerHTML = 'Quatro'
+
+        let listItem5 = document.createElement('li')
+        unorderedList.appendChild(listItem5)
+        listItem5.innerHTML = 'Cinco'
+
+        let listItem6 = document.createElement('li')
+        unorderedList.appendChild(listItem6)
+        listItem6.innerHTML = 'Seis'
+
+        let listItem7 = document.createElement('li')
+        unorderedList.appendChild(listItem7)
+        listItem7.innerHTML = 'Sete'
+
+        let listItem8 = document.createElement('li')
+        unorderedList.appendChild(listItem8)
+        listItem8.innerHTML = 'Oito'
+
+        let listItem9 = document.createElement('li')
+        unorderedList.appendChild(listItem9)
+        listItem9.innerHTML = 'Nove'
+
+        let listItem10 = document.createElement('li')
+        unorderedList.appendChild(listItem10)
+        listItem10.innerHTML = 'Dez'
+
+        //9
+
+        let firstH3 = document.createElement('h3')
+        main.appendChild(firstH3)
+        let secondH3 = document.createElement('h3')
+        main.appendChild(secondH3)
+        let thirdH3 = document.createElement('h3')
+        main.appendChild(thirdH3)
+
+        //Segunda parte
+        //1
+
+        titulo.className = 'title'
+
+        //2
+
+        firstH3.className = 'description'
+        secondH3.className = 'description'
+        thirdH3.className = 'description'
+
+        //3
+
+        main.removeChild(sectionLeft)
+
+        //4
+
+        sectionRight.style.marginRight = 'auto'
+
+        //5
+
+        section.style.background = 'green'
+
+        //6
+
+        unorderedList.removeChild(listItem9)
+        unorderedList.removeChild(listItem10)
+
+    </script>
+</body>
+
+</html>
